@@ -1,0 +1,107 @@
+/* comment */
+h1{
+    background-color: antiquewhite;
+    opacity: 0.1;
+    font-style: italic;
+}
+
+#head{
+    background-color: aqua;
+}
+
+.second{
+    color: blue;
+}
+
+p, pre{
+    margin-left: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    /*margin: 50px 50px 50px 50px;*/          
+}
+
+h3 {
+    border-style: groove dashed double dotted ; /* double, dottet, ridge, outset, intset, solid, hidden, none */
+    border-width:  5px 10px 11px 3px;
+    border-color: aliceblue purple blue green;
+    border-radius: 20px;
+    letter-spacing: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.pad{
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 10px;
+    padding: 40px 40px 40px 40px;
+}
+
+table, th, td{
+    border: 2px solid;
+    width: 50%;
+    border-collapse: collapse;
+}
+
+th, td{
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+tr:hover{
+    background-color: aqua;
+}
+
+.drop-down-button
+{
+    background-color: aquamarine;
+    color: white;
+    padding: 13px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.drop-down{
+    display: none;
+    position: absolute;
+    background-color:  lightblue;
+    min-width: 150px;
+}
+
+.drop-down a{
+    color: black;
+    passing: 11px 15px;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-down a:hover {
+    background-color: white;
+}
+
+.dropdown:hover .drop-down{
+    display: block;
+}
+
+.drop-down-button:hover{
+    background-color: aliceblue;
+}
+
+div[class = "test"]{
+    color: red;
+}
+
+/* Adds image to the backgroung
+body{
+    background-image: url("data:image/jpeg;base64,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");
+}
+*/
+
+/* Every element is affected
+*{
+    color: purple;
+}
+*/
+
