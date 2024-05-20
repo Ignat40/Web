@@ -1,219 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Result data Manager</title>
-
-    <style type="text/css">
-        body {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: auto;
-            flex-direction: column;
-        }
-
-        h2 {
-            text-align: center;
-        }
-
-        .label {
-            height: 10rem;
-            width: 60rem;
-            margin: 10vh;
-            padding: 10px;
-            display: inline-block;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        .bcontainer {
-            display: flex;
-        }
-
-        /* Period */
-        .switch {
-            position: relative;
-            margin: auto;
-            height: 60px;
-            /* Increased height */
-            border-radius: 30px;
-            /* Increased border radius */
-            width: 400px;
-            /* Doubled the width */
-        }
-
-        .switch input {
-            appearance: none;
-            width: 100%;
-            /* Adjusted width */
-            height: 100%;
-            /* Adjusted height */
-            border-radius: 30px;
-            /* Increased border radius */
-            background: gray;
-            outline: none;
-        }
-
-        .switch input::before,
-        .switch input::after {
-            z-index: 2;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-weight: bolder;
-            font-size: 20px;
-            /* Increased font size */
-        }
-
-        .switch input::before {
-            content: "SUMMER";
-            left: 30px;
-            /* Adjusted position */
-        }
-
-        .switch input::after {
-            content: "WINTER";
-            right: 30px;
-            /* Adjusted position */
-        }
-
-        .switch input:checked {
-            background-color: red(208, 77, 37);
-        }
-
-        .switch label {
-            z-index: 1;
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            border-radius: 30px;
-            /* Increased border radius */
-        }
-
-        .switch input {
-            transition: 0.25s;
-        }
-
-        .switch input:checked::after,
-        .switch input:checked::before {
-            color: white;
-            transition: color 0.5s;
-        }
-
-        .switch input:checked+label {
-            left: 10px;
-            right: 200px;
-            /* Doubled the distance */
-            background-color: red;
-            transition: left 0.5s, right 0.4s, 0.2s;
-        }
-
-        .switch input:not(:checked) {
-            background: gray;
-            transition: background 0.4s;
-        }
-
-        .switch input:not(:checked)::before {
-            color: white;
-            transition: color 0.5s;
-        }
-
-        .switch input:not(:checked)::after {
-            color: black;
-            transition: color 0.5s 0.2s;
-        }
-
-        .switch input:not(:checked)+label {
-            left: 200px;
-            /* Doubled the distance */
-            right: 10px;
-            background: white;
-            transition: left 0.4s 0.2s, right 0.5s, background 0.35s;
-        }
-
-        /* Products */
-
-        .product-container {
-            width: 1200px;
-            margin: auto;
-            background-color: whitesmoke;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 2rem;
-        }
-
-        .product-container:hover {
-            transform: scale(1.02);
-            box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.2);
-            transition: 0.5s;
-        }
-
-        .item-title {
-            color: black;
-            font-weight: 500;
-        }
-
-        .item-desctription {
-            color: darkgray;
-        }
-    </style>
-</head>
-
-<body>
-
-
-
-    <!-- <div class="container">
-        <div class="label" style="background-color: whitesmoke">
-            <h2>Choose Production Unit Scenario</h2>
-            <div class="bcontainer">
-                <span class="switch">
-                    <input type="checkbox" id="switcher">
-                    <label for="switcher"></label>
-                </span>
-            </div>
-
-        </div>
-
-    </div> 
-
-    <div class="product-container">
-        <div class="product">
-
-            <img src="/SampleDesign/img/boilder.png" alt="boilder" style="height: 200px;">
-            <h2 class="item-title"> Oil Boiler</h2>
-            <p class="item-desctription">
-                This is the Oil Boiler
-            </p>
-
-        </div>
-
-
-    </div>
-
-    <div class="product-container">
-        <div class="product">
-
-            <img src="/SampleDesign/img/gasboiler.png" alt="boilder" style="height: 200px;">
-            <h2 class="item-title"> Gas Boiler</h2>
-            <p class="item-desctription">
-                This is the Gas Boiler
-            </p>
-
-        </div>
-    </div>
-
-
-
-</body>
-
-</html> -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -225,12 +9,10 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            margin: 0;
+            margin: auto;
             padding: 0;
-            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
         }
 
         .center-box {
@@ -239,10 +21,9 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
-            margin-top: -40vh;
             width: 80vw;
             max-width: 800px;
-            font-family: Arial, sans-serif; 
+            font-family: Arial, sans-serif;
         }
 
         .button-container {
@@ -276,17 +57,235 @@
         button:active {
             transform: scale(0.95);
         }
+        .checkbox-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkbox-container label {
+            position: relative;
+            margin: 5px;
+            padding-left: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .checkbox-container label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked + label:before {
+            background-color: #2196F3;
+        }
+
+        .checkbox-container label:after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 9px;
+            width: 7px;
+            height: 14px;
+            border: solid #fff;
+            border-width: 0 3px 3px 0;
+            transform: rotate(45deg);
+            display: none;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked + label:after {
+            display: block;
+        }
+
     </style>
+    
 </head>
 
 <body>
-    <div class="center-box">
-        <h1>Choose Production Unit Scenario</h1>
-        <div class="button-container">
-            <button>Scenario One</button>
-            <button>Scenario Two</button>
+    
+    <div class="d-flex justify-content-center">
+        <div class="center-box">
+            <h1>Choose Boilers to Include in Optimization</h1>
+            </div> 
+
+            <form method="post">
+                
+                    
+                    <input id="@unit.Name" name="BoilersChecked" type="checkbox" value="@unit.Name" onclick="selectUnit('@unit.Name')" />
+                    <label for="@unit.Name">@unit.Alias</label>
+                
+                <button type="submit">Optimize</button> 
+                
+            </form>
+            <script>
+                function selectUnit(unitName) {
+                    document.getElementById('SelectedUnit').value = unitName;
+                    }
+            </script>
+
         </div>
     </div>
+
+	<div class="d-flex justify-content-center mt-5">
+		<div class="center-box">
+			<h1>@(string.IsNullOrEmpty(Model.SelectedUnit) ? "Optimized Results" : Model.SelectedUnit + " Optimized Results")</h1>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">Total Heat Produced:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.TotalHeatProduction</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">Total Electricity Produced:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.TotalElectricityProduction</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">Expenses:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.Expenses</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">Consumption of Gas:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.ConsumptionOfGas</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">Consumption of Oil:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.ConsumptionOfOil</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">Consumption of Electricity:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.ConsumptionOfElectricity</p>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <p style="margin: 0px 5px 0px 0px">CO2 Produced:</p>
+                <p style="margin: 0px 0px 5px 0px">@Model.CO2Emission</p>
+            </div>
+		</div>
+	</div>
+
+    @if(string.IsNullOrEmpty(Model.SelectedUnit))
+    {
+        <div class="d-flex justify-content-center mt-5 result-box">
+            <div class="center-box">
+                <h1>Unoptimized Results</h1>
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Total Heat Produced:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstHeat</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Total Electricity Produced:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstElectricity</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Expenses:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstExpenses</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Consumption of Gas:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstConsumptionOfGas</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Consumption of Oil:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstConsumptionOfOil</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Consumption of Electricity:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstConsumptionOfElectricity</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">CO2 Produced:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.WorstCO2Emission</p>
+                </div>
+		    </div>
+	    </div>
+	    <div class="d-flex justify-content-center mt-5 result-box">
+		    <div class="center-box ">
+			    <h1>Randomized Results</h1>
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Total Heat Produced:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomHeat</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Total Electricity Produced:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomElectricity</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Expenses:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomExpenses</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Consumption of Gas:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomConsumptionOfGas</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Consumption of Oil:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomConsumptionOfOil</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">Consumption of Electricity:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomConsumptionOfElectricity</p>
+                </div>
+
+                <div class="d-flex justify-content-center">
+                    <p style="margin: 0px 5px 0px 0px">CO2 Produced:</p>
+                    <p style="margin: 0px 0px 5px 0px">@Model.RandomCO2Emission</p>
+                </div>
+		    </div>
+	    </div>
+    }
+	
+
 </body>
 
 </html>
+
+@* 			<div class="table-container d-flex justify-content-center">
+				<table>
+					<thead>
+						<tr>
+							<th>Total Heat Produced  </th>
+							<th>Total Electricity Produced  </th>
+							<th>Turnover </th>
+                            <th>Consumption of Gas </th>
+                            <th>Consumption of Oil </th>
+                            <th>Consumption of Electricity </th>
+                            <th>CO2 Emissions (kg) </th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>@Model.TotalHeatProduction</td>
+							<td>@Model.TotalElectricityProduction</td>
+							<td>@Model.Turnover</td>
+                            <td>@Model.ConsumptionOfGas</td>
+                            <td>@Model.ConsumptionOfOil</td>
+                            <td>@Model.ConsumptionOfElectricity</td>
+                            <td>@Model.CO2Emission</td>
+						</tr>
+				</table>
+			</div> *@
