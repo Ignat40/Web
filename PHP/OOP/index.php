@@ -30,19 +30,38 @@ declare(strict_types= 1); //type declaration said to true. (Will disable loading
 
         // Accessing a static property    
 
-        echo Person::$drinkingAge; 
-        Person::setDrinkingAge(21);
-        echo Person::$drinkingAge;
-        $person3 = new Person("Ignatcho", '186', '20');
-        echo $person3->getDrinkingAge();
+        // echo Person::$drinkingAge; 
+        // Person::setDrinkingAge(21);
+        // echo Person::$drinkingAge;
+        // $person3 = new Person("Ignatcho", '186', '20');
+        // echo $person3->getDrinkingAge();
 
-        try {
-            $person3->setNmae(3);
-        } catch (Exception $e) {
-            echo $e->getMessage();
-        }
+        // try {
+        //     $person3->setNmae(3);
+        // } catch (Exception $e) {
+        //     echo $e->getMessage();
+        // }
+
+        
+
+        // Abstract classes
+
+        include_once '../OOP/Abstract/paymenttypes.abstract.php';
+        include_once '../OOP/Classes/BuyProduct.class.php';
+
+        $buyProduct = new BuyProduct();
+        echo $buyProduct->getpayment();
 
 
+        // Anonymous class -> ususally used once in one place as it's less heavy to load 
+
+        $newObj = new class() {
+            public function greeting(){
+                echo 'Hello World';
+            }
+        };
+
+        $newObj->greeting();
 
 
 
