@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: laravel_app
+    environment:
+      APP_NAME: Laravel
+      APP_ENV: local
+      APP_KEY: base64:w8/vxEvIrZcEj2wvDrzKbDaLcyssCteCvndsB0uPqjo=
+      APP_DEBUG: true
+      APP_TIMEZONE: UTC
+      APP_URL: http://localhost:8000
+      DB_CONNECTION: pgsql
+      DB_PASSWORD: 1932&leGo_briCk
+      DATABASE_URL: postgresql://postgres.gnqbghqimmqdfmqhhwun:1932&leGo_briCk@aws-0-eu-central-1.pooler.supabase.com:6543/postgres
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+      - redis
+
+  db:
+    image: postgres:15
+    container_name: postgres_db
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 1932&leGo_briCk
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+  redis:
+    image: redis:alpine
+    container_name: redis_cache
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  db_data:
+  redis_data:
